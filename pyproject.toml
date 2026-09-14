@@ -1,0 +1,40 @@
+[build-system]
+requires = [
+      "setuptools>=61.0.0",
+      "wheel",
+    ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geonodectl-zalf"
+version = "0.1.0"
+description = "geonodectl extension for the ZALF GeoNode backend"
+authors = [{ name = "marcel wallschlaeger", email = "marcel.wallschlaeger@zalf.de" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "geonodectl>=0.4.0,<0.5",
+]
+
+[project.optional-dependencies]
+test = [
+    "pre_commit==4.3.0",
+    "flake8==7.0.0",
+    "black==24.4.1",
+    "mypy==1.10.0",
+]
+
+[project.urls]
+repository = "https://github.com/zalf-rdm/geonodectl-extensions"
+geonodectl = "https://github.com/GeoNodeUserGroup-DE/geonodectl/"
+
+[project.entry-points."geonodectl.extensions"]
+zalf = "geonodectl_zalf:extension"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests/",
+]
