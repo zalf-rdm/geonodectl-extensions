@@ -11,8 +11,11 @@ version = "0.1.0"
 description = "geonodectl extension for the ZALF GeoNode backend"
 authors = [{ name = "marcel wallschlaeger", email = "marcel.wallschlaeger@zalf.de" }]
 readme = "README.md"
-license = { file = "LICENSE" }
 requires-python = ">=3.10"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+]
 dependencies = [
     "geonodectl>=0.4.0,<0.5",
 ]
